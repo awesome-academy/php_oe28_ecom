@@ -20,6 +20,14 @@ return [
     'shop' => 'Shop',
     'collection' => 'Collection',
     'all_branches' => 'All branches',
+    'remember_me' => 'Remember me',
+    'username' => 'Username',
+    'password' => 'Password',
+    'confirm_password' => 'Confirm password',
+    'email_address' => 'Email address',
+    'forgot_password' => 'Forgot your password?',
+    'name' => 'Name',
+    'phone' => 'Phone',
 
 
 ];

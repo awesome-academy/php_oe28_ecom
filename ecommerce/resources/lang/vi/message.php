@@ -20,5 +20,14 @@ return [
     'shop' => 'Cửa hàng',
     'collection' => 'Bộ sưu tập',
     'all_branches' => 'Tất cả các hãng',
+    'remember_me' => 'Ghi nhớ đăng nhập',
+    'username' => 'Tên đăng nhập',
+    'password' => 'Mật khẩu',
+    'confirm_password' => 'Xác nhận mật khẩu',
+    'email_address' => 'Địa chỉ email',
+    'forgot_password' => 'Quên mật khẩu?',
+    'name' => 'Tên người dùng',
+    'phone' => 'Số điện thoại',
+
 ];
 

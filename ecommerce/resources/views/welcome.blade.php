@@ -11,18 +11,20 @@
 
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/themify-icons.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/elegant-icons.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/nice-select.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/jquery-ui.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/slicknav.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/bootstrap.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/themify-icons.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/elegant-icons.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/nice-select.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/jquery-ui.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/slicknav.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('bower_components/demo-bower/css/style.css')}}" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+
 
 </head>
 
@@ -36,23 +38,22 @@
 <header class="header-section">
 
     @if (Route::has('login'))
-        <div class="top-right links">
+        <div class="top-right links float-right">
             @auth
-
-
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
-                     style="margin-right: 150px">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="logout();">
-                        {{ trans('message.logout') }}
-                    </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+{{--                    <a class="dropdown-item"--}}
+{{--                       onclick="logout();">--}}
+{{--                        {{ trans('message.logout') }}--}}
+{{--                    </a>--}}
 
-                    <form id="logout-form" class="logout-button" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form id="logout-form" class="logout-button" method="POST" action="{{ route('logout') }}" >
+                        <button type="submit" class="top-right"> {{ trans('message.logout') }}</button>
+{{--                        <a class="dropdown-item" href="{{route('logout')}}"> {{ trans('message.logout') }} </a>--}}
                         @csrf
                     </form>
                 </div>
@@ -194,6 +195,16 @@
 </div>
 <!-- Banner Section End -->
 
+<script src="{{ asset('bower_components/demo-bower/js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/jquery.countdown.min.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/jquery.nice-select.min.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/jquery.zoom.min.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/jquery.dd.min.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/jquery.slicknav.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('bower_components/demo-bower/js/main.js') }}"></script>
 </body>
 
 </html>
